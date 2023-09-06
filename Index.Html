@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Search Example</title>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Set the background color to dark grey */
+        body {
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Style the container with dark background */
+        .container {
+            background-color: #444;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Style the table with dark background */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #555;
+        }
+
+        table, th, td {
+            border: 1px solid #666;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            color: #fff;
+        }
+
+        /* Style the navbar with dark background */
+        .navbar {
+            background-color: #222 !important;
+        }
+
+        /* Style the search input with dark background */
+        #searchInput {
+            background-color: #444;
+            color: #fff;
+            border: 1px solid #666;
+        }
+
+        /* Style the footer with dark background */
+        .footer {
+            text-align: center;
+            background-color: #222;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Style the button within the footer */
+        .footer-button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        /* Style the copyright text in the footer */
+        .copyright-text {
+            color: #ccc;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Add a fixed-top navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <h1 class="navbar-brand pl-3 pr-3" style="color: white;">Table with Search</h1>
+            <form class="form-inline my-2 my-lg-0 pr-3">
+                <input class="form-control mr-sm-2" type="search" id="searchInput" placeholder="Search for items...">
+            </form>
+        </div>
+    </nav>
+    <br><br><br>
+    <div class="container mt-5">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Amazon Prime Student</td>
+                    <td>6 months free, then 50% off the regular price</td>
+                    <td>E-commerce, Streaming, Student Discount</td>
+                  </tr>
+                  <tr>
+                    <td>Adobe Creative Cloud</td>
+                    <td>60% off the regular price</td>
+                    <td>Graphic Design, Software, Creative Apps</td>
+                  </tr>
+                  <tr>
+                    <td>Spotify Premium Student</td>
+                    <td>50% off the regular price</td>
+                    <td>Music Streaming, Student Discount, Ad-free</td>
+                  </tr>
+                  <tr>
+                    <td>Microsoft Office 365 Education</td>
+                    <td>Free or discounted access to Microsoft Office apps, including Word, Excel, and PowerPoint.</td>
+                    <td>Productivity, Microsoft, Education</td>
+                  </tr>
+                  <tr>
+                    <td>GitHub Student Developer Pack</td>
+                    <td>Get free access to a variety of developer tools and services, including GitHub Codespaces, GitHub Actions, and GitHub Packages.</td>
+                    <td>Software Development, Developer Tools, Version Control</td>
+                  </tr>
+                  <tr>
+                    <td>Canva</td>
+                    <td>Get 10% off the regular price</td>
+                    <td>Graphic Design, Online Design, Creativity</td>
+                  </tr>
+                  <tr>
+                    <td>Skillshare</td>
+                    <td>Get 2 months free and then 10% off the regular price</td>
+                    <td>Online Learning, Creative Skills, Skill Development</td>
+                  </tr>
+                  <tr>
+                    <td>Coursera</td>
+                    <td>Get 10% off the regular price</td>
+                    <td>Online Learning, Education, University Courses</td>
+                  </tr>
+                  <tr>
+                    <td>LinkedIn Learning</td>
+                    <td>Get 1 month free and then 15% off the regular price</td>
+                    <td>Online Learning, Business Skills, Professional Development</td>
+                  </tr>
+                  <tr>
+                    <td>Tidal HiFi Student</td>
+                    <td>Get 50% off the regular price</td>
+                    <td>Music Streaming, Hi-fi Audio, Student Discount</td>
+                  </tr>
+                  <tr>
+                    <td>Apple Music</td>
+                    <td>Get 50% off the regular price</td>
+                    <td>Music Streaming, Apple, Entertainment</td>
+                  </tr>
+                  <tr>
+                    <td>Netflix</td>
+                    <td>Get 15% off the regular price</td>
+                    <td>Streaming, Movies, TV Shows</td>
+                  </tr>
+                  <tr>
+                    <td>Hulu</td>
+                    <td>Get 65% off the regular price</td>
+                    <td>Streaming, TV Shows, Movies</td>
+                  </tr>
+                  <tr>
+                    <td>HBO Max</td>
+                    <td>Get 50% off the regular price</td>
+                    <td>Streaming, HBO, Entertainment</td>
+                  </tr>
+                  <tr>
+                    <td>Deezer</td>
+                    <td>Get 50% off the regular price</td>
+                    <td>Music Streaming, Audio, Music Discovery</td>
+                  </tr>
+                  <tr>
+                    <td>Xbox Game Pass</td>
+                    <td>Get 10% off the regular price</td>
+                    <td>Gaming, Xbox, Game Library</td>
+                  </tr>
+                  <tr>
+                    <td>PlayStation Plus</td>
+                    <td>Get 10% off the regular price</td>
+                    <td>Gaming, PlayStation, Online Multiplayer</td>
+                  </tr>
+                  <tr>
+                    <td>Adobe Creative Cloud All Apps</td>
+                    <td>Get 40% off the regular price</td>
+                    <td>Graphic Design, Software Suite, Adobe</td>
+                  </tr>
+                  <tr>
+                    <td>Grammarly Premium</td>
+                    <td>Get 20% off the regular price</td>
+                    <td>Writing Assistant, Grammar, Writing Enhancement</td>
+                  </tr>
+                  <tr>
+                    <td>Notion</td>
+                    <td>Get 10% off the regular price</td>
+                    <td>Productivity, Task Management, Note-taking</td>
+                  </tr>
+                  <tr>
+                    <td>Zoom</td>
+                    <td>Get 10% off the regular price</td>
+                    <td>Video Conferencing, Online Meetings, Webinars</td>
+                  </tr>
+                  <tr>
+                    <td>Grammarly Business</td>
+                    <td>Get 20% off the regular price</td>
+                    <td>Business, Writing Assistance, Team Collaboration</td>
+                  </tr>
+                  <tr>
+                    <td>1Password</td>
+                    <td>Get 40% off the regular price</td>
+                    <td>Password Management, Security, Data Protection</td>
+                  </tr>
+                  <tr>
+                    <td>Dropbox</td>
+                    <td>Get 16% off the regular price</td>
+                    <td>Cloud Storage, File Sharing, Data Management</td>
+                  </tr>
+                  <tr>
+                    <td>Slack</td>
+                    <td>Get 80% off the regular price</td>
+                    <td>Team Communication, Messaging, Collaboration</td>
+                  </tr>
+                  <tr>
+                    <td>Atlassian</td>
+                    <td>Get 40% off the regular price</td>
+                    <td>Software, Project Management, Collaboration</td>
+                  </tr>
+                  <tr>
+                    <td>GitLab</td>
+                    <td>Get free or discounted access</td>
+                    <td>Version Control, Software Development, Collaboration</td>
+                  </tr>
+                  <tr>
+                    <td>InVision</td>
+                    <td>Get 50% off the regular price</td>
+                    <td>Design, Prototyping, Collaboration</td>
+                  </tr>
+                  <tr>
+                    <td>Figma</td>
+                    <td>Get 50% off the regular price</td>
+                    <td>Design, Collaboration, Prototyping</td>
+                  </tr>
+                  <tr>
+                    <td>Quip</td>
+                    <td>Get 50% off the regular price</td>
+                    <td>Productivity, Note-taking, Collaboration</td>
+                  </tr>
+                  <tr>
+                    <td>Noizio</td>
+                    <td>Get 50% off the regular price</td>
+                    <td>Sound Machine, Relaxation, Focus</td>
+                  </tr>
+                  <tr>
+                    <td>Evernote</td>
+                    <td>Get 15% off the regular price</td>
+                    <td>Note-taking, Organization, Productivity</td>
+                  </tr>
+                  <tr>
+                    <td>Trello</td>
+                    <td>Get 10% off the regular price</td>
+                    <td>Project Management, Task Organization, Collaboration</td>
+                  </tr>
+                  <tr>
+                    <td>Monday.com</td>
+                    <td>Get 15% off the regular price</td>
+                    <td>Project Management, Task Tracking, Team Collaboration</td>
+                  </tr>
+                  <tr>
+                    <td>Asana</td>
+                    <td>Get 10% off the regular price</td>
+                    <td>Project Management, Task Organization, Team Productivity</td>
+                  </tr>
+                  <tr>
+                    <td>Google Cloud Platform</td>
+                    <td>Get 20% off the regular price</td>
+                    <td>Cloud Computing, Web Hosting, Google Services</td>
+                  </tr>
+                  <tr>
+                    <td>Microsoft Azure</td>
+                    <td>Get 10% off the regular price</td>
+                    <td>Cloud Computing, Web Hosting, Microsoft Services</td>
+                  </tr>
+                  <tr>
+                    <td>Amazon Web Services (AWS)</td>
+                    <td>Get 50% off the regular price</td>
+                    <td>Cloud Computing, Web Hosting, Amazon Services</td>
+                  </tr>
+                  <tr>
+                    <td>Salesforce</td>
+                    <td>Get 10% off the regular price</td>
+                    <td>CRM, Customer Management, Business Software</td>
+                  </tr>
+                  <tr>
+                    <td>HubSpot</td>
+                    <td>Get 10% off the regular price</td>
+                    <td>Marketing, Sales, Business Growth</td>
+                  </tr>
+                  <tr>
+                    <td>Zendesk</td>
+                    <td>Get 10% off the regular price</td>
+                    <td>Customer Support, Helpdesk, Ticketing System</td>
+                  </tr>
+                  <tr>
+                    <td>Freshdesk</td>
+                    <td>Get 20% off the regular price</td>
+                    <td>Customer Support, Helpdesk, Team Collaboration</td>
+                  </tr>
+                  <tr>
+                    <td>Zenly</td>
+                    <td>Get 50% off the regular price</td>
+                    <td>Location Sharing, Social Networking, Mobile App</td>
+                  </tr>
+                  <tr>
+                    <td>Hopper</td>
+                    <td>Get 10% off the regular price</td>
+                    <td>Travel, Flight Booking, Hotel Reservations</td>
+                  </tr>
+                  <tr>
+                    <td>Skyscanner</td>
+                    <td>Get 10% off the regular price</td>
+                    <td>Travel, Flight Search, Hotel Search</td>
+                  </tr>
+                  <tr>
+                    <td>Booking.com</td>
+                    <td>Get 10% off the regular price</td>
+                    <td>Travel, Hotel Booking, Accommodation</td>
+                  </tr>
+                  <tr>
+                    <td>Airbnb</td>
+                    <td>Get 10% off the regular price</td>
+                    <td>Travel, Vacation Rentals, Accommodation</td>
+                  </tr>
+                  <tr>
+                    <td>Udemy</td>
+                    <td>Get 10% off the regular price</td>
+                    <td>Online Learning, Skill Development, Courses</td>
+                  </tr>
+                  <tr>
+                    <td>Lynda</td>
+                    <td>Get 15% off the regular price</td>
+                    <td>Online Learning, Skill Development, Courses</td>
+                  </tr>
+                  <tr>
+                    <td>Pluralsight</td>
+                    <td>Get 10% off the regular price</td>
+                    <td>Online Learning, Skill Development, Courses</td>
+                  </tr>
+                  <tr>
+                    <td>Shaw Academy</td>
+                    <td>Get 20% off the regular price</td>
+                    <td>Online Learning, Skill Development, Courses</td>
+                  </tr>
+                  <tr>
+                    <td>Skillshare</td>
+                    <td>Get 40% off the regular price</td>
+                    <td>Online Learning, Creative Skills, Skill Development</td>
+                  </tr>
+                  <tr>
+                    <td>Treehouse</td>
+                    <td>Get 30% off the regular price</td>
+                    <td>Online Learning, Web Development, Design</td>
+                  </tr>
+                  <tr>
+                    <td>Codecademy</td>
+                    <td>Get 10% off the regular price</td>
+                    <td>Online Learning, Coding, Programming</td>
+                  </tr>
+                  <tr>
+                    <td>Codewars</td>
+                    <td>Get 50% off the regular price</td>
+                    <td>Coding Challenges, Programming, Skill Improvement</td>
+                  </tr>
+                  <tr>
+                    <td>FreeCodeCamp</td>
+                    <td>Get free access</td>
+                    <td>Coding Bootcamp, Free Learning, Programming</td>
+                  </tr>
+                  <tr>
+                    <td>The Odin Project</td>
+                    <td>Get free access</td>
+                    <td>Coding Bootcamp, Free Learning, Programming</td>
+                  </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Add a footer with a button and copyright notice -->
+    <div class="footer">
+        <a href="mailto:diinoprakash@gmail.com" class="footer-button">Add more details</a><br><br>
+        <p class="copyright-text">Made by students for students - &copy; Diino Industries 2021-2025</p>
+    </div>
+
+    <!-- Add Bootstrap and jQuery scripts for search functionality -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#searchInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("table tbody tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+</body>
+</html>
